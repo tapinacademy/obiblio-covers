@@ -1,0 +1,14 @@
+*** shared/biblio_view.php      Sat Mar 17 18:00:18 2012
+--- shared/biblio_view_pic.php  Wed Feb 13 19:56:09 2013
+***************
+*** 133,138 ****
+--- 133,141 ----
+      <td valign="top" class="primary">
+        <?php echo H($materialTypeDm[$biblio->getMaterialCd()]);?>
+      </td>
++     <?php
++       if (isset($biblioFlds['020a'])) echo '<td rowspan="8"><img src="http://covers.openlibrary.org/b/isbn/'.$biblioFlds['020a']->getFieldData().'-M.jpg" style="margin-left:10px;padding:3px;border:solid 1px #000;border-radius:5px;" /></td>';
++     ?>
+    </tr>
+    <tr>
+      <td nowrap="true" class="primary" valign="top">
